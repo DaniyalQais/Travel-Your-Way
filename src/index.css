@@ -20,15 +20,15 @@
   body {
     background-color: #ffffff;
     color: #0b1528;
-    font-family: 'Manrope', system-ui, -apple-system, sans-serif;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Cormorant Garamond', Georgia, serif;
-    letter-spacing: -0.01em;
+    font-family: 'DM Serif Display', Georgia, serif;
+    letter-spacing: -0.015em;
   }
 }
 
@@ -88,7 +88,7 @@
 
 @layer utilities {
   .editorial-kicker {
-    font-family: 'Manrope', system-ui, sans-serif;
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
     font-size: 0.6875rem;
     font-weight: 600;
     letter-spacing: 0.22em;
@@ -97,7 +97,7 @@
   }
 
   .editorial-kicker-light {
-    font-family: 'Manrope', system-ui, sans-serif;
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
     font-size: 0.6875rem;
     font-weight: 600;
     letter-spacing: 0.22em;

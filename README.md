@@ -38,7 +38,7 @@ Designed with an unhurried luxury travel aesthetic inspired by industry benchmar
 * **Framework:** [React 19](https://react.dev/) + [Vite](https://vitejs.dev/)
 * **Language:** [TypeScript](https://www.typescriptlang.org/) (Strict mode enabled)
 * **Styling:** [Tailwind CSS v3](https://tailwindcss.com/) with customized luxury design tokens
-* **Typography:** [Cormorant Garamond](https://fonts.google.com/specimen/Cormorant+Garamond) (Display/Serif) & [Manrope](https://fonts.google.com/specimen/Manrope) (Body/Interface)
+* **Typography:** [DM Serif Display](https://fonts.google.com/specimen/DM+Serif+Display) (Display/Serif) & [Plus Jakarta Sans](https://fonts.google.com/specimen/Plus+Jakarta+Sans) (Body/Interface)
 * **Icons:** [Lucide React](https://lucide.dev/)
 * **Linter:** [Oxlint](https://oxc.rs/)
 

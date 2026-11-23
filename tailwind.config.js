@@ -48,8 +48,8 @@ export default {
         },
       },
       fontFamily: {
-        serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
-        sans: ['"Manrope"', 'system-ui', '-apple-system', 'sans-serif'],
+        serif: ['"DM Serif Display"', '"Cormorant Garamond"', 'Georgia', 'serif'],
+        sans: ['"Plus Jakarta Sans"', '"Manrope"', 'system-ui', '-apple-system', 'sans-serif'],
       },
       letterSpacing: {
         widest: '0.22em',
