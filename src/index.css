@@ -1,0 +1,182 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: #ffffff;
+  --color-alabaster: #fbf9f5;
+  --color-coastal: #e7f1ef;
+  --color-navy-900: #0b1528;
+  --color-gold-400: #c5a880;
+  --color-gold-500: #ad8d62;
+}
+
+@layer base {
+  html {
+    color-scheme: light;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #ffffff;
+    color: #0b1528;
+    font-family: 'Manrope', system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    letter-spacing: -0.01em;
+  }
+}
+
+/* =========================================================================
+   Restrained Premium Motion Keyframes & Utilities
+   ========================================================================= */
+
+@keyframes heroSlowZoom {
+  0% {
+    transform: scale(1.0);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(1.045);
+    opacity: 1;
+  }
+}
+
+@keyframes editorialFadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes navFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scrollPulse {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(200%);
+    opacity: 0;
+  }
+}
+
+@layer utilities {
+  .editorial-kicker {
+    font-family: 'Manrope', system-ui, sans-serif;
+    font-size: 0.6875rem;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--color-gold-500);
+  }
+
+  .editorial-kicker-light {
+    font-family: 'Manrope', system-ui, sans-serif;
+    font-size: 0.6875rem;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #d8c2a5;
+  }
+
+  .frosted-glass-nav-light {
+    background-color: rgba(255, 255, 255, 0.94);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+  }
+
+  /* Gentle hero image slow-reveal */
+  .animate-hero-zoom {
+    animation: heroSlowZoom 18s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+    will-change: transform, opacity;
+  }
+
+  /* Refined staggered entrance animations */
+  .animate-fade-up {
+    animation: editorialFadeUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    will-change: transform, opacity;
+  }
+
+  .animate-nav-entrance {
+    animation: navFadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  /* Minimal vertical scroll cue track */
+  .animate-scroll-cue {
+    animation: scrollPulse 2.4s ease-in-out infinite;
+  }
+
+  /* Entrance Delays */
+  .animation-delay-100 {
+    animation-delay: 100ms;
+  }
+
+  .animation-delay-250 {
+    animation-delay: 250ms;
+  }
+
+  .animation-delay-450 {
+    animation-delay: 450ms;
+  }
+
+  .animation-delay-650 {
+    animation-delay: 650ms;
+  }
+
+  .animation-delay-850 {
+    animation-delay: 850ms;
+  }
+}
+
+/* =========================================================================
+   Strict Accessibility: Respect Reduced Motion Preferences
+   ========================================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    animation-delay: 0ms !important;
+    transition-duration: 0.001ms !important;
+    transition-delay: 0ms !important;
+    scroll-behavior: auto !important;
+    transform: none !important;
+  }
+
+  .animate-hero-zoom,
+  .animate-fade-up,
+  .animate-nav-entrance,
+  .animate-scroll-cue {
+    animation: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+}
